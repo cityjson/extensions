@@ -3,7 +3,7 @@
   "version": "2.0",
   "extensions": {
     "Shed": {
-      "url": "https://cityjson.github.io/extensions/shed/0.1.1/schema.ext.json",
+      "url": "https://cityjson.github.io/extensions/shed/0.1.1/shed.ext.json",
       "version": "0.1.1"
     }
   },
