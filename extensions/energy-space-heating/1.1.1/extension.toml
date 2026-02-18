@@ -1,0 +1,10 @@
+[extension]
+name = "quality"
+version = "1.1.1"
+versionCityJSON = "2.0"
+description = "CityJSON Energy Extension for Space Heating Demand Calculation"
+authors = ["Özge Tufan"]
+repository = "https://github.com/ozgetufan/cjenergy/"
+# doi = ["https://someurl.org"]
+keywords = ["energy"]
+license = "Unknown"

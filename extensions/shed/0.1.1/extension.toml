@@ -1,0 +1,10 @@
+[extension]
+name = "shed"
+version = "0.1.1"
+versionCityJSON = "2.0"
+description = "Example of an Extension for modelling sheds; meant as a template to learn how to construct an Extension"
+authors = ["Hugo Ledoux <https://3d.bk.tudelft.nl/hledoux>"]
+# repository = "https://github.com/myusername/cityjson-shed-extension"
+# doi = ["https://someurl.org"]
+keywords = ["sustainability", "urban"]
+license = "MIT"

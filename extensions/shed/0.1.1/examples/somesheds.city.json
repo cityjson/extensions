@@ -1,0 +1,65 @@
+{
+  "type": "CityJSON",
+  "version": "2.0",
+  "extensions": {
+    "Shed": {
+      "url": "https://cityjson.github.io/extensions/shed/0.1.1/schema.ext.json",
+      "version": "0.1.1"
+    }
+  },
+  "CityObjects": {
+    "id-1": {
+      "geometry": [
+        {
+          "type": "Solid",
+          "lod": "1.2",
+          "boundaries": [
+            [
+              [[0, 1, 2, 3]],
+              [[4, 5, 0, 3]],
+              [[5, 6, 1, 0]],
+              [[6, 7, 2, 1]],
+              [[3, 2, 7, 4]],
+              [[7, 6, 5, 4]]
+            ]
+          ],
+          "semantics": {
+            "surfaces": [
+              {
+                "type": "WallSurface",
+                "slope": 33.4
+              },
+              {
+                "type": "+GenericSemanticSurface",
+                "attribute_1": 66.6
+              },
+              {
+                "type": "RoofSurface",
+                "colour": "blue"
+              }
+            ],
+            "values": [[0, 0, null, 1, 2, 1]]
+          }
+        }
+      ],
+      "attributes": {
+        "function": "something"
+      },
+      "type": "+Shed"
+    }
+  },
+  "vertices": [
+    [2000, 1000, 1000],
+    [1000, 2000, 1000],
+    [0, 1000, 1000],
+    [1000, 0, 1000],
+    [1000, 0, 0],
+    [2000, 1000, 0],
+    [1000, 2000, 0],
+    [0, 1000, 0]
+  ],
+  "transform": {
+    "scale": [0.001, 0.001, 0.001],
+    "translate": [0.0, 0.0, 0.0]
+  }
+}

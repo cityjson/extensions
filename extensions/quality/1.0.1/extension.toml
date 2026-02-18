@@ -1,0 +1,10 @@
+[extension]
+name = "quality"
+version = "1.0.1"
+versionCityJSON = "2.0"
+description = "Application Domain Extension to data quality modeling"
+authors = ["Grigory Ilizirov", "Sagi Dalyot <https://ecsl.net.technion.ac.il/members/>"]
+repository = "https://github.com/TheGreatWizard/data-quality"
+# doi = ["https://someurl.org"]
+keywords = ["data quality"]
+license = "MIT"
