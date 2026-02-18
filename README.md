@@ -17,7 +17,7 @@ CityJSON Extensions allow you to add custom properties and objects to CityJSON d
 |-----------|-------------|----------------|--------------|
 | [energy-space-heating](https://cityjson.github.io/extensions/energy-space-heating/1.1.1/energy-space-heating.ext.json) | CityJSON Energy Extension for Space Heating Demand Calculation | 1.1.1 | Özge Tufan |
 | [quality](https://cityjson.github.io/extensions/quality/1.0.1/quality.ext.json) | Application Domain Extension to data quality modeling | 1.0.1 | Grigory Ilizirov, Sagi Dalyot |
-| [shed](https://cityjson.github.io/extensions/shed/0.1.1/shed.ext.json) | Example of an Extension for modelling sheds; meant as a template to learn how to construct an Extension | 0.1.1 | Hugo Ledoux |
+| [shed](https://cityjson.github.io/extensions/shed/0.1.1/shed.ext.json) | Example of an Extension for modelling sheds; meant as a template to learn how to construct an Extension | 0.1.1 | [Hugo Ledoux](@hugoledoux) |
 <!-- EXTENSIONS_TABLE_END -->
 
 
