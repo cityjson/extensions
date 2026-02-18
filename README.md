@@ -13,12 +13,12 @@ CityJSON Extensions allow you to add custom properties and objects to CityJSON d
 ## Available Extensions
 
 <!-- EXTENSIONS_TABLE_START -->
-| Extension | Description | Latest version | Developer(s) |
-|-----------|-------------|----------------|--------------|
-| [energy-space-heating](https://cityjson.github.io/extensions/energy-space-heating/1.1.1/energy-space-heating.ext.json) | CityJSON Energy Extension for Space Heating Demand Calculation | 1.1.1 | Özge Tufan |
-| [perpection](https://cityjson.github.io/extensions/perpection/0.5/perpection.ext.json) | To model the visual perception of buildings | 0.5 | [Binyu Lei](https://binyulei.github.io/) |
-| [quality](https://cityjson.github.io/extensions/quality/1.0.1/quality.ext.json) | Application Domain Extension to data quality modeling | 1.0.1 | Grigory Ilizirov, Sagi Dalyot |
-| [shed](https://cityjson.github.io/extensions/shed/0.1.1/shed.ext.json) | Example of an Extension for modelling sheds; meant as a template to learn how to construct an Extension | 0.1.1 | [Hugo Ledoux](@hugoledoux) |
+| Extension | Description | Latest version | Schema | Developer(s) |
+|-----------|-------------|----------------|--------|--------------|
+| [energy-space-heating](https://github.com/cityjson/extensions/tree/main/extensions/energy-space-heating/1.1.1) | CityJSON Energy Extension for Space Heating Demand Calculation | 1.1.1 | [energy-space-heating.ext.json](https://cityjson.github.io/extensions/energy-space-heating/1.1.1/energy-space-heating.ext.json) | Özge Tufan |
+| [perception](https://github.com/cityjson/extensions/tree/main/extensions/perception/0.5) | To model the visual perception of buildings | 0.5 | [perception.ext.json](https://cityjson.github.io/extensions/perception/0.5/perception.ext.json) | [Binyu Lei](https://binyulei.github.io/) |
+| [quality](https://github.com/cityjson/extensions/tree/main/extensions/quality/1.0.1) | Application Domain Extension to data quality modeling | 1.0.1 | [quality.ext.json](https://cityjson.github.io/extensions/quality/1.0.1/quality.ext.json) | Grigory Ilizirov, Sagi Dalyot |
+| [shed](https://github.com/cityjson/extensions/tree/main/extensions/shed/0.1.1) | Example of an Extension for modelling sheds; meant as a template to learn how to construct an Extension | 0.1.1 | [shed.ext.json](https://cityjson.github.io/extensions/shed/0.1.1/shed.ext.json) | [Hugo Ledoux](@hugoledoux) |
 <!-- EXTENSIONS_TABLE_END -->
 
 

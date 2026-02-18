@@ -49,8 +49,8 @@ def latest_version(ext_dir: Path) -> str | None:
 
 def build_table() -> str:
     """Build a Markdown table for all extensions."""
-    header = "| Extension | Description | Latest version | Developer(s) |"
-    separator = "|-----------|-------------|----------------|--------------|"
+    header = "| Extension | Description | Latest version | Schema | Developer(s) |"
+    separator = "|-----------|-------------|----------------|--------|--------------|"
     rows = [header, separator]
 
     for ext_dir in sorted(EXTENSIONS_DIR.iterdir()):
@@ -74,11 +74,21 @@ def build_table() -> str:
         authors = data.get("authors", [])
         developers = ", ".join(strip_url(a) for a in authors)
 
-        url = (
+        folder_url = (
+            f"https://github.com/cityjson/extensions/tree/main/extensions/"
+            f"{name}/{version}"
+        )
+        schema_url = (
             f"https://cityjson.github.io/extensions/"
             f"{name}/{version}/{name}.ext.json"
         )
-        rows.append(f"| [{name}]({url}) | {description} | {version} | {developers} |")
+        rows.append(
+            f"| [{name}]({folder_url})"
+            f" | {description}"
+            f" | {version}"
+            f" | [{name}.ext.json]({schema_url})"
+            f" | {developers} |"
+        )
 
     return "\n".join(rows)
 
