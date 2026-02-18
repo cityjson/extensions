@@ -73,11 +73,13 @@ Each Extension follows this structure within the registry:
 extensions/
 ├── shed/
 │   └── 0.1.0/
+│       └── ...
+│   └── 0.1.1/
 │       ├── examples/
 │       │   └── shed_example.json
 │       ├── README.md
-│       ├── shed.ext.json          (Extension schema)
-│       ├── extension.toml             (Metadata)
+│       ├── shed.ext.json          <-- (Extension schema)
+│       ├── extension.toml         <-- (metadata)
 │       └── LICENSE.txt
 ├── energy/
 │   └── 1.0.0/
