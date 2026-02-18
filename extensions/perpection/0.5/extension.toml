@@ -1,0 +1,10 @@
+[extension]
+name = "perception"
+version = "0.5.0"
+versionCityJSON = "2.0"
+description = "To model the visual perception of buildings"
+authors = ["[Binyu Lei](https://binyulei.github.io/)"]
+repository = "https://github.com/binyulei/3D_building_perception"
+doi = ["https://doi.org/10.5194/isprs-annals-X-4-W5-2024-211-2024"]
+# keywords = ["sustainability", "urban"]
+license = "MIT"
