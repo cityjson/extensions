@@ -1,0 +1,10 @@
+[extension]
+name = "noise"
+version = "2.0.0"
+versionCityJSON = "2.0"
+description = "Extension for Noise Emission Simulation"
+authors = ["Hugo Ledoux <https://3d.bk.tudelft.nl/hledoux>"]
+repository = "https://www.cityjson.org/tutorials/extension/"
+# doi = ["https://someurl.org"]
+keywords = ["noise"]
+license = "MIT"
