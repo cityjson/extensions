@@ -22,9 +22,7 @@ CityJSON Extensions allow you to add custom properties and objects to CityJSON d
 <!-- EXTENSIONS_TABLE_END -->
 
 
-## Getting Started
-
-### Using an Extension
+## Using an Extension
 
 To use a CityJSON Extension in your project:
 
@@ -40,20 +38,17 @@ Example reference in a CityJSON file:
   "version": "2.0",
   "extensions": {
     "Lamppost": {
-      "name": "https://cityjson.github.io/extensions/lamppost/0.1.0/lamppost.ext.json",
-      "version": "0.1.0"
+      "name": "https://cityjson.github.io/extensions/lamppost/0.1.0/lamppost.ext.json"
     }
   }
 }
 ```
 
-### Creating your own Extension
+## Guidelines for submitting a new Extension
 
 To create a new CityJSON Extension, refer to the [CityJSON Extension page](https://www.cityjson.org/extensions/#how-to-create-an-extension).
 
-## Guidelines for submitting a new Extension
-
-Before submitting, please ensure your Extension meets these criteria:
+Before submitting to this registry, please ensure your Extension meets these criteria:
 
 - **Usefulness**: The Extension should be useful to others and address a real need
 - **Novelty**: Verify that no existing Extension already covers your use case
@@ -66,7 +61,7 @@ Before submitting, please ensure your Extension meets these criteria:
 - **Quality**: Code should be clear, well-documented, and follow best practices
 
 
-## Directory Structure
+### Directory Structure
 
 Each Extension follows this structure within the registry:
 
@@ -92,7 +87,7 @@ extensions/
 └── ...
 ```
 
-### File Descriptions
+### Required file for each version
 
 - **`{name}.ext.json`**: The [CityJSON Extension schema file](https://www.cityjson.org/specs/#the-extension-file) containing the core definition
 - **`extension.toml`**: Metadata about the Extension (name, version, author, etc.)
@@ -100,7 +95,7 @@ extensions/
 - **`examples/`**: Directory containing example CityJSON files using this Extension
 - **`LICENSE.txt`**: License file (MIT, Apache 2.0, or other)
 
-## How to Submit an Extension
+### Steps to submit an Extension
 
 Once your Extension meets all the submission requirements above, follow these steps:
 
@@ -129,9 +124,9 @@ Once your Extension meets all the submission requirements above, follow these st
 
 6. **Create a pull request** to the main repository with a clear description of your Extension
 
-### Extension Schema Template
+## Extension schema template
 
-Here's a minimal example for a Lamppost Extension:
+Here's a minimal example for a (hypothetical) Lamppost Extension:
 
 ```json
 {
@@ -165,7 +160,7 @@ Here's a minimal example for a Lamppost Extension:
 
 - [CityJSON Official Website](https://www.cityjson.org/)
 - [CityJSON Specification](https://github.com/cityjson/spec)
-- [CityJSON Extension Specification](https://www.cityjson.org/extensions/)
+- [CityJSON Extensions page](https://www.cityjson.org/extensions/)
 - [Semantic Versioning](https://semver.org/)
 - [Choose a License](https://choosealicense.com)
 
@@ -173,10 +168,11 @@ Here's a minimal example for a Lamppost Extension:
 
 We welcome contributions from the community! If you have questions or suggestions:
 
-- **Open an Issue**: For bugs, questions, or feature requests
-- **Start a Discussion**: For broader topics or design questions
-- **Submit a Pull Request**: To add a new Extension or improve existing ones
+- **Open an issue**: For bugs, questions, or feature requests
+- **Start a discussion**: For broader topics or design questions
+- **Submit a pull request**: To add a new Extension or improve existing ones
 
 ## License
 
-The registry itself is maintained by the CityJSON community. Each Extension in the registry is licensed according to its own LICENSE file.
+The registry itself is maintained by the CityJSON community. 
+Each Extension in the registry is licensed according to its own LICENSE file.
