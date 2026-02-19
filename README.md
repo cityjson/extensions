@@ -87,13 +87,15 @@ extensions/
 └── ...
 ```
 
-### Required file for each version
+### Required files for each version
 
-- **`{name}.ext.json`**: The [CityJSON Extension schema file](https://www.cityjson.org/specs/#the-extension-file) containing the core definition
-- **`extension.toml`**: Metadata about the Extension (name, version, author, etc.)
-- **`README.md`**: Documentation explaining the Extension, its use cases, and examples 
-- **`examples/`**: Directory containing example CityJSON files using this Extension
-- **`LICENSE.txt`**: License file (MIT, Apache 2.0, or other)
+| File      | Description          |
+| --------- | -------------------- |
+| `{name}.ext.json` | The [CityJSON Extension schema file](https://www.cityjson.org/specs/#the-extension-file) containing the core definition |
+| `extension.toml`  | Metadata about the Extension (name, version, author, etc.) |
+| `README.md`       | Documentation explaining the Extension, its use cases, and examples (there is no template) |
+| `examples/` (folder)  | Directory containing example CityJSON files using this Extension |
+| `LICENSE.txt`     | License file (MIT, Apache 2.0, or other) | 
 
 ### Steps to submit an Extension
 
@@ -108,12 +110,12 @@ Once your Extension meets all the submission requirements above, follow these st
    mkdir -p extensions/{name}/{version}
    ```
 
-3. **Add your Extension files**:
-   - `{name}.ext.json` - Your Extension schema
-   - `extension.toml` - Metadata file
-   - `README.md` - Extension documentation
-   - `examples/` - Folder with example CityJSON files
-   - `LICENSE.txt` - License file
+3. **Add the required files:**:
+   - `{name}.ext.json`
+   - `extension.toml`
+   - `README.md` 
+   - `examples/`
+   - `LICENSE.txt` 
 
 4. **Ensure the correct URL format**: Your Extension will be accessible at:
    ```
@@ -123,6 +125,7 @@ Once your Extension meets all the submission requirements above, follow these st
 5. **Commit and push** your changes to your fork
 
 6. **Create a pull request** to the main repository with a clear description of your Extension
+
 
 ## Extension schema template
 
