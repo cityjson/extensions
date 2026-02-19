@@ -37,7 +37,7 @@ Example reference in a CityJSON file:
   "type": "CityJSON",
   "version": "2.0",
   "extensions": {
-    "Lamppost": {
+    "lamppost": {
       "name": "https://cityjson.github.io/extensions/lamppost/0.1.0/lamppost.ext.json"
     }
   }
