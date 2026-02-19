@@ -51,7 +51,7 @@ Example reference in a CityJSON file:
 
 To create a new CityJSON Extension, refer to the [CityJSON Extension page](https://www.cityjson.org/extensions/#how-to-create-an-extension).
 
-## Submission guidelines
+## Guidelines for submitting a new Extension
 
 Before submitting, please ensure your Extension meets these criteria:
 
