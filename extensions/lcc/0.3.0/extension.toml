@@ -1,0 +1,10 @@
+[extension]
+name = "llc"
+description = "Extension to model the topology of the city as a linear cell complex based on a combinatorial map."
+version = "0.3.0"
+versionCityJSON = "2.0"
+authors = ["[Stelios Vitalis](https://github.com/liberostelios)"]
+repository = "https://github.com/tudelft3d/cityjson-lcc-extension"
+doi = ["https://doi.org/10.3390/ijgi8080347"]
+# keywords = ["sustainability", "urban"]
+# license = "MIT"

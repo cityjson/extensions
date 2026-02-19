@@ -1,0 +1,52 @@
+{
+  "type": "CityJSONExtension",
+  "name": "Linear Cell Complex (C-Map)",
+  "uri": "https://cityjson.github.io/extensions/llc/0.3.0/llc.ext.json",
+  "version": "0.3.0",
+  "versionCityJSON": "2.0",
+  "description": "Extension to model the topology of the city as a linear cell complex based on a combinatorial map.",
+  "extraRootProperties": {
+    "+darts": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "number"
+        },
+        "betas": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "number" }
+          }
+        },
+        "parentCityObjects": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "semanticSurfaces": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "number" }
+          }
+        },
+        "vertices": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      },
+      "required": ["count", "betas", "parentCityObjects", "vertices"],
+      "additionalProperties": false
+    }
+  },
+  "extraAttributes": {
+    "_AbstractCityObject": {
+      "+lccVolumes": {
+        "type": "array",
+        "items": { "type": "number" }
+      }
+    }
+  },
+  "extraCityObjects": {},
+  "extraSemanticSurfaces": {}
+}
