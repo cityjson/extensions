@@ -9,36 +9,36 @@
   "extraAttributes": {
     "Building": {
       "+perception-originality": {
-        "value": "number"
+        "type": ["number", "null"]
       },
       "+perception-pleasing": {
-        "value": "number"
+        "type": ["number", "null"]
       },
       "+perception-ordered": {
-        "value": "number"
+        "type": ["number", "null"]
       },
       "+perception-boring": {
-        "value": "number"
+        "type": ["number", "null"]
       },
       "+perception-complexity": {
-        "value": "number"
+        "type": ["number", "null"]
       }
     },
     "BuildingPart": {
       "+perception-originality": {
-        "value": "number"
+        "type": ["number", "null"]
       },
       "+perception-pleasing": {
-        "value": "number"
+        "type": ["number", "null"]
       },
       "+perception-ordered": {
-        "value": "number"
+        "type": ["number", "null"]
       },
       "+perception-boring": {
-        "value": "number"
+        "type": ["number", "null"]
       },
       "+perception-complexity": {
-        "value": "number"
+        "type": ["number", "null"]
       }
     }
   },
