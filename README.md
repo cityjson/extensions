@@ -1,6 +1,7 @@
-# CityJSON Extensions registry
+# CityJSON Extensions registry 📖
 
-This is the official registry for [CityJSON](https://www.cityjson.org/) Extensions. It provides a centralised location where developers can discover, submit, and maintain CityJSON Extensions that extend the core CityJSON specification.
+This is the official registry for [CityJSON Extensions](https://www.cityjson.org/extension/). 
+It provides a centralised location where developers can discover, submit, and maintain CityJSON Extensions that extend the core CityJSON specification.
 
 ## Overview
 
