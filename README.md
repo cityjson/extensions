@@ -40,7 +40,8 @@ Example reference in a CityJSON file:
   "version": "2.0",
   "extensions": {
     "lamppost": {
-      "url": "https://cityjson.github.io/extensions/lamppost/0.1.0/lamppost.ext.json"
+      "url": "https://cityjson.github.io/extensions/lamppost/0.1.0/lamppost.ext.json",
+      "version": "0.1.0"
     }
   }
 }

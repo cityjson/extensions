@@ -2,7 +2,7 @@
   "type": "CityJSON",
   "version": "2.0",
   "extensions": {
-    "Shed": {
+    "shed": {
       "url": "https://cityjson.github.io/extensions/shed/0.1.1/shed.ext.json",
       "version": "0.1.1"
     }

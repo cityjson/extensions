@@ -2,8 +2,8 @@
   "type": "CityJSON",
   "version": "2.0",
   "extensions": {
-    "Quality": {
-      "url": "https://raw.githubusercontent.com/TheGreatWizard/data-quality/main/cityjson-spec/1.1/extension/quality.schema.json",
+    "quality": {
+      "url": "https://cityjson.github.io/extensions/perception/1.0.1/quality.schema.json",
       "version": "1.0.1"
     }
   },
