@@ -3,7 +3,7 @@
   "version": "2.0",
   "extensions": {
     "quality": {
-      "url": "https://cityjson.github.io/extensions/perception/1.0.1/quality.schema.json",
+      "url": "https://cityjson.github.io/extensions/quality/1.0.1/quality.ext.json",
       "version": "1.0.1"
     }
   },
