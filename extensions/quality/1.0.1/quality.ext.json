@@ -1,7 +1,7 @@
 {
   "type": "CityJSONExtension",
   "name": "Quality",
-  "uri": "https://cityjson.github.io/extensions/quality/1.0.1/schema.ext.json",
+  "uri": "https://cityjson.github.io/extensions/quality/1.0.1/quality.ext.json",
   "version": "1.0.1",
   "versionCityJSON": "2.0",
   "description": "Application Domain Extension to data quality modeling",
