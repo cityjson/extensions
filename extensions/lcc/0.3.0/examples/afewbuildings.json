@@ -37830,7 +37830,7 @@
     }
   },
   "extensions": {
-    "llc": {
+    "lcc": {
       "url": "https://cityjson.github.io/extensions/lcc/0.3.0/lcc.ext.json",
       "version": "0.3.0"
     }

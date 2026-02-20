@@ -2,7 +2,7 @@
   "type": "CityJSONExtension",
   "name": "Noise",
   "url": "https://cityjson.github.io/extensions/noise/2.0.0/noise.ext.json",
-  "version": "2.0",
+  "version": "2.0.0",
   "versionCityJSON": "2.0",
   "description": "Extension for Noise Emission Simulation",
 
