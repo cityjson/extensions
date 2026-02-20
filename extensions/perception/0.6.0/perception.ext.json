@@ -2,8 +2,8 @@
   "type": "CityJSONExtension",
   "name": "Perception",
   "description": "Extension to model the human perception",
-  "url": "https://cityjson.github.io/extensions/perception/0.5.0/perception.ext.json",
-  "version": "0.5.0",
+  "url": "https://cityjson.github.io/extensions/perception/0.6.0/perception.ext.json",
+  "version": "0.6.0",
   "versionCityJSON": "2.0",
 
   "extraAttributes": {
