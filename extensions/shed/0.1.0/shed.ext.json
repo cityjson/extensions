@@ -1,7 +1,7 @@
 {
   "type": "CityJSONExtension",
   "name": "Shed",
-  "uri": "https://cityjson.github.io/extensions/shed/0.1.0/schema.ext.json",
+  "uri": "https://cityjson.github.io/extensions/shed/0.1.0/shed.ext.json",
   "version": "0.1.0",
   "versionCityJSON": "2.0",
   "description": "Example of an Extension for sheds; meant as a template to learn how to construct an Extension",
