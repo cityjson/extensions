@@ -1,4 +1,4 @@
 
-# Shed CityJSON Extensions
+# MultiRoofs Extension
 
-A demo Extension where sheds are modelled, with a new semantic surface.
+Extra attributes necessary for the buildings in the project MultiRoofs.
