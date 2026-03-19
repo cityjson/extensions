@@ -1,0 +1,112 @@
+{
+  "type": "CityJSONExtension",
+  "name": "multiroofs",
+  "uri": "https://cityjson.github.io/extensions/multiroofs/0.1.0/multiroofs.ext.json",
+  "version": "0.1.0",
+  "versionCityJSON": "2.0",
+  "description": "Attributes needed for the MultiRoofs project",
+  "extraAttributes": {
+    "Building": {
+      "+building-function": {
+        "type": "string"
+      },
+      "+building-has-elevator": {
+        "type": ["string", "null"],
+        "enum": ["yes", "no", null]
+      },
+      "+building-heritage-status": {
+        "type": ["string", "null"]
+      },
+      "+building-max-height-allowed": {
+        "type": ["number", "null"]
+      },
+      "+building-monument-status": {
+        "type": ["boolean", "null"]
+      },
+      "+building-type": {
+        "type": "string",
+        "enum": ["Detached", "Semi-detached", "Apartement", "null"]
+      },
+      "+building-volume": {
+        "type": "number"
+      },
+      "+building-year-construction": {
+        "type": "integer"
+      },
+      "+colours": {
+        "type": "object",
+        "properties": {
+          "social": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "water": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "green": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "energy": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "densification": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "utilities": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "mobility": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "social",
+          "water",
+          "green",
+          "energy",
+          "densification",
+          "utilities",
+          "mobility"
+        ],
+        "additionalProperties": false
+      },
+      "+roof-area": {
+        "type": ["number", "null"]
+      },
+      "+roof-compactness": {
+        "type": ["number", "null"]
+      },
+      "+roof-elevation": {
+        "type": ["number", "null"]
+      },
+      "+roof-good-solar": {
+        "type": ["boolean", "null"]
+      },
+      "+roof-irradiance": {
+        "type": ["number", "null"]
+      },
+      "+roof-slope": {
+        "type": ["number", "null"]
+      },
+      "+roof-sun-hours": {
+        "type": ["number", "null"]
+      }
+    }
+  },
+  "extraRootProperties": {},
+  "extraSemanticSurfaces": {},
+  "extraCityObjects": {}
+}

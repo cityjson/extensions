@@ -1,0 +1,10 @@
+[extension]
+name = "multiroofs"
+version = "0.1.0"
+versionCityJSON = "2.0"
+description = "Extension for the MultiRoofs EU project (https://multiroofs.nweurope.eu)"
+authors = ["Hugo Ledoux <https://3d.bk.tudelft.nl/hledoux>"]
+repository = "https://github.com/MultiRoofs/cityjson-extension"
+# doi = ["https://someurl.org"]
+keywords = ["sustainability", "urban"]
+license = "MIT"
