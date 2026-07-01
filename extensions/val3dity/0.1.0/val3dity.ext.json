@@ -1,0 +1,268 @@
+{
+  "type": "CityJSONExtension",
+  "name": "Val3dity",
+  "uri": "https://cityjson.github.io/extensions/val3dity/0.1.0/val3dity.ext.json",
+  "version": "0.1.0",
+  "versionCityJSON": "2.0",
+  "description": "Extension to store val3dity validation reports and per-geometry diagnostics.",
+  "definitions": {
+    "summary": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "valid": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": ["type", "total", "valid"],
+      "additionalProperties": false
+    },
+    "error-code-count": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": ["code", "count"],
+      "additionalProperties": false
+    },
+    "point-location": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "enum": ["reported", "derived-centroid"]
+        },
+        "coordinates": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "required": ["role", "coordinates"],
+      "additionalProperties": false
+    },
+    "error-location": {
+      "type": "object",
+      "properties": {
+        "cityObjectId": {
+          "type": "string"
+        },
+        "geometryIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "shellIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "faceIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ringIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "vertexIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "point": {
+          "$ref": "#/definitions/point-location"
+        }
+      },
+      "required": ["cityObjectId", "geometryIndex"],
+      "additionalProperties": false
+    },
+    "validation-error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "info": {
+          "type": "string"
+        },
+        "sourceId": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/error-location"
+        }
+      },
+      "required": ["code", "description", "sourceId", "location"],
+      "additionalProperties": false
+    },
+    "geometry-validation": {
+      "type": "object",
+      "properties": {
+        "geometryIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "validity": {
+          "type": "boolean"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/validation-error"
+          }
+        }
+      },
+      "required": ["geometryIndex", "validity", "errors"],
+      "additionalProperties": false
+    },
+    "cityobject-validation": {
+      "type": "object",
+      "properties": {
+        "validity": {
+          "type": "boolean"
+        },
+        "reportFeatureId": {
+          "type": "string"
+        },
+        "geometries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/geometry-validation"
+          }
+        }
+      },
+      "required": ["validity"],
+      "additionalProperties": false
+    },
+    "dataset-error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "info": {
+          "type": "string"
+        },
+        "sourceId": {
+          "type": "string"
+        }
+      },
+      "required": ["code", "description"],
+      "additionalProperties": false
+    },
+    "report": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": ["val3dity_report"]
+        },
+        "val3dityVersion": {
+          "type": "string"
+        },
+        "inputFile": {
+          "type": "string"
+        },
+        "inputFileType": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        },
+        "validity": {
+          "type": "boolean"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "boolean"
+              }
+            ]
+          }
+        },
+        "featuresOverview": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/summary"
+          }
+        },
+        "primitivesOverview": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/summary"
+          }
+        },
+        "allErrors": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "errorCodeSummary": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/error-code-count"
+          }
+        },
+        "datasetErrors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/dataset-error"
+          }
+        }
+      },
+      "required": ["type", "val3dityVersion", "validity"],
+      "additionalProperties": false
+    }
+  },
+  "extraRootProperties": {
+    "+val3dity-report": {
+      "$ref": "#/definitions/report"
+    }
+  },
+  "extraAttributes": {
+    "_AbstractCityObject": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "Building": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BuildingPart": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    }
+  },
+  "extraCityObjects": {},
+  "extraSemanticSurfaces": {}
+}

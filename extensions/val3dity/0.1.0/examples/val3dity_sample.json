@@ -1,0 +1,170 @@
+{
+  "type": "CityJSON",
+  "version": "2.0",
+  "extensions": {
+    "val3dity": {
+      "url": "https://cityjson.github.io/extensions/val3dity/0.1.0/val3dity.ext.json",
+      "version": "0.1.0"
+    }
+  },
+  "+val3dity-report": {
+    "type": "val3dity_report",
+    "val3dityVersion": "2.6.0",
+    "inputFile": "/data-2/sync/rf-val3dity/out-10-434-716-i1/122064_485853.city.jsonl",
+    "inputFileType": "CityJSONSeq",
+    "time": "2026-06-10T18:49:09 (CEST)",
+    "validity": false,
+    "parameters": {
+      "overlap_tol": -1.0,
+      "planarity_d2p_tol": 0.01,
+      "planarity_n_tol": 20.0,
+      "snap_tol": 0.001
+    },
+    "featuresOverview": [
+      {
+        "type": "Building",
+        "total": 474,
+        "valid": 464
+      }
+    ],
+    "primitivesOverview": [
+      {
+        "type": "Solid",
+        "total": 449,
+        "valid": 439
+      },
+      {
+        "type": "MultiSurface",
+        "total": 474,
+        "valid": 474
+      }
+    ],
+    "allErrors": [102, 104, 203, 303],
+    "errorCodeSummary": [
+      {
+        "code": 102,
+        "count": 16
+      },
+      {
+        "code": 104,
+        "count": 3
+      },
+      {
+        "code": 203,
+        "count": 4
+      },
+      {
+        "code": 303,
+        "count": 9
+      }
+    ],
+    "datasetErrors": []
+  },
+  "CityObjects": {
+    "0363100012164938": {
+      "type": "Building",
+      "children": ["0363100012164938-0"],
+      "geometry": [
+        {
+          "type": "MultiSurface",
+          "lod": "0",
+          "boundaries": [
+            [[0, 1, 2, 3]]
+          ]
+        }
+      ]
+    },
+    "0363100012164938-0": {
+      "type": "BuildingPart",
+      "parents": ["0363100012164938"],
+      "geometry": [
+        {
+          "type": "Solid",
+          "lod": "2.2",
+          "boundaries": [
+            [
+              [[0, 1, 2, 3]],
+              [[4, 5, 6, 7]]
+            ]
+          ]
+        }
+      ],
+      "attributes": {
+        "+val3dity-validation": {
+          "validity": false,
+          "reportFeatureId": "0363100012164938",
+          "geometries": [
+            {
+              "geometryIndex": 0,
+              "validity": false,
+              "errors": [
+                {
+                  "code": 102,
+                  "description": "CONSECUTIVE_POINTS_SAME",
+                  "sourceId": "coid=0363100012164938-0|geom=0|shell=0|face=3",
+                  "location": {
+                    "cityObjectId": "0363100012164938-0",
+                    "geometryIndex": 0,
+                    "shellIndex": 0,
+                    "faceIndex": 3
+                  }
+                },
+                {
+                  "code": 102,
+                  "description": "CONSECUTIVE_POINTS_SAME",
+                  "sourceId": "coid=0363100012164938-0|geom=0|shell=0|face=81",
+                  "location": {
+                    "cityObjectId": "0363100012164938-0",
+                    "geometryIndex": 0,
+                    "shellIndex": 0,
+                    "faceIndex": 81
+                  }
+                },
+                {
+                  "code": 104,
+                  "description": "RING_SELF_INTERSECTION",
+                  "info": "ring self-intersects or is collapsed to a line",
+                  "sourceId": "coid=0363100012164938-0|geom=0|shell=0|face=331",
+                  "location": {
+                    "cityObjectId": "0363100012164938-0",
+                    "geometryIndex": 0,
+                    "shellIndex": 0,
+                    "faceIndex": 331
+                  }
+                },
+                {
+                  "code": 203,
+                  "description": "NON_PLANAR_POLYGON_DISTANCE_PLANE",
+                  "info": "distance to fitted plane: 0.41057 (tolerance=0.01)",
+                  "sourceId": "coid=0363100012164938-0|geom=0|shell=0|face=313",
+                  "location": {
+                    "cityObjectId": "0363100012164938-0",
+                    "geometryIndex": 0,
+                    "shellIndex": 0,
+                    "faceIndex": 313
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "vertices": [
+    [0, 0, 0],
+    [10, 0, 0],
+    [10, 10, 0],
+    [0, 10, 0],
+    [0, 0, 10],
+    [10, 0, 10],
+    [10, 10, 10],
+    [0, 10, 10]
+  ],
+  "metadata": {},
+  "appearance": {},
+  "transform": {
+    "scale": [1.0, 1.0, 1.0],
+    "translate": [0.0, 0.0, 0.0]
+  }
+}
