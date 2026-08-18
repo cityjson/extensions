@@ -1,6 +1,6 @@
-# Val3dity extension
+# val3dity extension
 
-The Val3dity extension stores validation results produced by [val3dity](https://github.com/tudelft3d/val3dity) in a CityJSON document. It is intended for workflows where validation diagnostics need to travel with the geometry, including per-geometry errors and the face or primitive reported by val3dity.
+The val3dity extension stores validation results produced by [val3dity](https://github.com/tudelft3d/val3dity) in a CityJSON document. It is intended for workflows where validation diagnostics need to travel with the geometry, including per-geometry errors and the face or primitive reported by val3dity.
 
 You can visually inspect the val3dity errors in CityJSON files that use this extensions with [CJLoupe](https://github.com/3DGI/CJLoupe).
 
