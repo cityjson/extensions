@@ -2,16 +2,16 @@
 
 The Val3dity extension stores validation results produced by [val3dity](https://github.com/tudelft3d/val3dity) in a CityJSON document. It is intended for workflows where validation diagnostics need to travel with the geometry, including per-geometry errors and the face or primitive reported by val3dity.
 
+You can visually inspect the val3dity errors in CityJSON files that use this extensions with [CJLoupe](https://github.com/3DGI/CJLoupe).
+
 ## Root report
 
 The root property `+val3dity-report` stores metadata about the validation run:
 
 - `val3dityVersion`: version of val3dity used.
-- `inputFile` and `inputFileType`: source reported by val3dity.
-- `time`: validation run time as reported by val3dity.
 - `validity`: overall dataset validity.
 - `parameters`: validation tolerances and other run parameters.
-- `featuresOverview`, `primitivesOverview`, `allErrors`, `errorCodeSummary`, and `datasetErrors`: dataset-level summaries.
+- `featuresOverview`, `primitivesOverview`, `errorCodeSummary`, and `datasetErrors`: dataset-level summaries.
 
 ## CityObject validation
 
@@ -27,12 +27,10 @@ Each error stores:
 - `sourceId`: the original val3dity location string.
 - `location`: a structured version of the location.
 
-For val3dity ids such as `coid=0363100012164938-0|geom=0|shell=0|face=313`, the structured location is:
+For val3dity ids such as `coid=0363100012164938-0|geom=0|shell=0|face=313`, the error is grouped under geometry record `geometryIndex=0`, and its structured location is relative to that geometry:
 
 ```json
 {
-  "cityObjectId": "0363100012164938-0",
-  "geometryIndex": 0,
   "shellIndex": 0,
   "faceIndex": 313
 }
@@ -42,7 +40,7 @@ If a producer reports or derives a point location, `location.point` may be added
 
 ## Example
 
-See `examples/val3dity_sample.json` for a compact example based on a val3dity report for CityJSONSeq. The report feature is a `Building`, while val3dity points to the geometry-owning `BuildingPart`; the extension therefore stores the diagnostics on the `BuildingPart` and keeps the original report feature id in `reportFeatureId`.
+See `examples/val3dity_sample.json` for an example CityJSON file with embedded val3dity report based on val3dity's own [data/cityjsonseq/3dbag_b2.city.jsonl](https://github.com/tudelft3d/val3dity/blob/40d65ff7710e45a4bf64771c5ce9083243ccbf76/data/cityjsonseq/3dbag_b2.city.jsonl) test file.
 
 ## Merge utility
 

@@ -1,8 +1,8 @@
 {
   "type": "CityJSONExtension",
   "name": "Val3dity",
-  "uri": "https://cityjson.github.io/extensions/val3dity/0.1.0/val3dity.ext.json",
-  "version": "0.1.0",
+  "uri": "https://cityjson.github.io/extensions/val3dity/0.2.0/val3dity.ext.json",
+  "version": "0.2.0",
   "versionCityJSON": "2.0",
   "description": "Extension to store val3dity validation reports and per-geometry diagnostics.",
   "definitions": {
@@ -59,13 +59,6 @@
     "error-location": {
       "type": "object",
       "properties": {
-        "cityObjectId": {
-          "type": "string"
-        },
-        "geometryIndex": {
-          "type": "integer",
-          "minimum": 0
-        },
         "shellIndex": {
           "type": "integer",
           "minimum": 0
@@ -86,7 +79,6 @@
           "$ref": "#/definitions/point-location"
         }
       },
-      "required": ["cityObjectId", "geometryIndex"],
       "additionalProperties": false
     },
     "validation-error": {
@@ -118,9 +110,6 @@
           "type": "integer",
           "minimum": 0
         },
-        "validity": {
-          "type": "boolean"
-        },
         "errors": {
           "type": "array",
           "items": {
@@ -128,7 +117,7 @@
           }
         }
       },
-      "required": ["geometryIndex", "validity", "errors"],
+      "required": ["geometryIndex", "errors"],
       "additionalProperties": false
     },
     "cityobject-validation": {
@@ -136,9 +125,6 @@
       "properties": {
         "validity": {
           "type": "boolean"
-        },
-        "reportFeatureId": {
-          "type": "string"
         },
         "geometries": {
           "type": "array",
@@ -172,19 +158,7 @@
     "report": {
       "type": "object",
       "properties": {
-        "type": {
-          "enum": ["val3dity_report"]
-        },
         "val3dityVersion": {
-          "type": "string"
-        },
-        "inputFile": {
-          "type": "string"
-        },
-        "inputFileType": {
-          "type": "string"
-        },
-        "time": {
           "type": "string"
         },
         "validity": {
@@ -218,12 +192,6 @@
             "$ref": "#/definitions/summary"
           }
         },
-        "allErrors": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
         "errorCodeSummary": {
           "type": "array",
           "items": {
@@ -237,7 +205,7 @@
           }
         }
       },
-      "required": ["type", "val3dityVersion", "validity"],
+      "required": ["val3dityVersion", "validity"],
       "additionalProperties": false
     }
   },

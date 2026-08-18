@@ -17,8 +17,8 @@ from pathlib import Path
 from typing import Any
 
 
-EXTENSION_URL = "https://cityjson.github.io/extensions/val3dity/0.1.0/val3dity.ext.json"
-EXTENSION_VERSION = "0.1.0"
+EXTENSION_URL = "https://cityjson.github.io/extensions/val3dity/0.2.0/val3dity.ext.json"
+EXTENSION_VERSION = "0.2.0"
 VALIDATION_ATTRIBUTE = "+val3dity-validation"
 REPORT_PROPERTY = "+val3dity-report"
 
@@ -144,17 +144,12 @@ def error_code_summary(report: dict[str, Any]) -> list[dict[str, int]]:
 
 def convert_report(report: dict[str, Any]) -> dict[str, Any]:
     out: dict[str, Any] = {}
-    copy_if_present(out, report, "type", "type")
     copy_if_present(out, report, "val3dityVersion", "val3dity_version")
-    copy_if_present(out, report, "inputFile", "input_file")
-    copy_if_present(out, report, "inputFileType", "input_file_type")
-    copy_if_present(out, report, "time", "time")
     copy_if_present(out, report, "validity", "validity")
     if "parameters" in report and isinstance(report["parameters"], dict):
         out["parameters"] = scalar_report_parameters(report["parameters"])
     copy_if_present(out, report, "featuresOverview", "features_overview")
     copy_if_present(out, report, "primitivesOverview", "primitives_overview")
-    copy_if_present(out, report, "allErrors", "all_errors")
     out["errorCodeSummary"] = error_code_summary(report)
     dataset_errors = [
         converted
@@ -165,17 +160,20 @@ def convert_report(report: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
-def parse_source_id(source_id: str, fallback_city_object_id: str) -> dict[str, Any]:
+def parse_source_id(
+    source_id: str, fallback_city_object_id: str
+) -> tuple[str, int, dict[str, Any]]:
     raw_parts = {}
     for part in source_id.split("|"):
         if "=" in part:
             key, value = part.split("=", 1)
             raw_parts[key] = value
 
-    location: dict[str, Any] = {
-        "cityObjectId": raw_parts.get("coid", fallback_city_object_id),
-        "geometryIndex": parse_non_negative_int(raw_parts.get("geom"), 0),
-    }
+    city_object_id = raw_parts.get("coid", fallback_city_object_id)
+    geometry_index = parse_non_negative_int(raw_parts.get("geom"), 0)
+    if geometry_index is None:
+        geometry_index = 0
+    location: dict[str, Any] = {}
     optional_ints = {
         "shell": "shellIndex",
         "face": "faceIndex",
@@ -186,7 +184,7 @@ def parse_source_id(source_id: str, fallback_city_object_id: str) -> dict[str, A
         value = parse_non_negative_int(raw_parts.get(source_key), None)
         if value is not None:
             location[target_key] = value
-    return location
+    return city_object_id, geometry_index, location
 
 
 def parse_non_negative_int(value: str | None, default: int | None) -> int | None:
@@ -199,9 +197,13 @@ def parse_non_negative_int(value: str | None, default: int | None) -> int | None
     return parsed if parsed >= 0 else default
 
 
-def convert_error(error: dict[str, Any], fallback_city_object_id: str) -> dict[str, Any]:
+def convert_error(
+    error: dict[str, Any], fallback_city_object_id: str
+) -> tuple[str, int, dict[str, Any]]:
     source_id = str(error.get("id") or error.get("sourceId") or error.get("source_id") or "")
-    location = parse_source_id(source_id, fallback_city_object_id)
+    city_object_id, geometry_index, location = parse_source_id(
+        source_id, fallback_city_object_id
+    )
     out = {
         "code": error.get("code"),
         "description": str(error.get("description", "UNKNOWN")),
@@ -211,7 +213,7 @@ def convert_error(error: dict[str, Any], fallback_city_object_id: str) -> dict[s
     info = error.get("info")
     if info:
         out["info"] = str(info)
-    return out
+    return city_object_id, geometry_index, out
 
 
 def build_validations(report: dict[str, Any], include_valid: bool) -> dict[str, dict[str, Any]]:
@@ -226,24 +228,19 @@ def build_validations(report: dict[str, Any], include_valid: bool) -> dict[str, 
             continue
 
         for error in errors:
-            converted = convert_error(error, feature_id)
-            location = converted["location"]
-            city_object_id = location["cityObjectId"]
-            geometry_index = location["geometryIndex"]
+            city_object_id, geometry_index, converted = convert_error(error, feature_id)
             record = working.setdefault(
                 city_object_id,
                 {
                     "validity": False,
-                    "_geometries": defaultdict(lambda: {"validity": False, "errors": []}),
+                    "_geometries": defaultdict(lambda: {"errors": []}),
                 },
             )
             record["validity"] = False
             record.setdefault(
                 "_geometries",
-                defaultdict(lambda: {"validity": False, "errors": []}),
+                defaultdict(lambda: {"errors": []}),
             )
-            if feature_id and feature_id != city_object_id:
-                record.setdefault("reportFeatureId", feature_id)
             geometry = record["_geometries"][geometry_index]
             geometry["errors"].append(converted)
 
@@ -259,7 +256,6 @@ def finalize_validations(working: dict[str, dict[str, Any]]) -> dict[str, dict[s
             out["geometries"] = [
                 {
                     "geometryIndex": geometry_index,
-                    "validity": geometry["validity"],
                     "errors": geometry["errors"],
                 }
                 for geometry_index, geometry in sorted(geometries.items())
