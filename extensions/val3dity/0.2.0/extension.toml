@@ -1,0 +1,9 @@
+[extension]
+name = "val3dity"
+version = "0.2.0"
+versionCityJSON = "2.0"
+description = "Extension to store val3dity validation reports and per-geometry diagnostics."
+authors = ["CityJSON contributors"]
+repository = "https://github.com/cityjson/extensions"
+keywords = ["validation", "geometry", "quality", "val3dity"]
+license = "MIT"
