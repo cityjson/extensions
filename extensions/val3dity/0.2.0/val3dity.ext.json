@@ -215,7 +215,32 @@
     }
   },
   "extraAttributes": {
-    "_AbstractCityObject": {
+    "Bridge": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BridgeConstructiveElement": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BridgeFurniture": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BridgeInstallation": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BridgePart": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BridgeRoom": {
       "+val3dity-validation": {
         "$ref": "#/definitions/cityobject-validation"
       }
@@ -226,6 +251,131 @@
       }
     },
     "BuildingPart": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BuildingConstructiveElement": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BuildingFurniture": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BuildingInstallation": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BuildingRoom": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BuildingStorey": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "BuildingUnit": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "CityFurniture": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "CityObjectGroup": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "GenericCityObject": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "LandUse": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "OtherConstruction": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "PlantCover": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "Railway": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "Road": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "SolitaryVegetationObject": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "TINRelief": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "TransportSquare": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "Tunnel": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "TunnelConstructiveElement": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "TunnelFurniture": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "TunnelHollowSpace": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "TunnelInstallation": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "TunnelPart": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "WaterBody": {
+      "+val3dity-validation": {
+        "$ref": "#/definitions/cityobject-validation"
+      }
+    },
+    "Waterway": {
       "+val3dity-validation": {
         "$ref": "#/definitions/cityobject-validation"
       }
