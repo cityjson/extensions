@@ -23,7 +23,7 @@ CityJSON Extensions allow you to add custom properties and objects to CityJSON d
 | [perception](https://github.com/cityjson/extensions/tree/main/extensions/perception/0.6.0) | To model the visual perception of buildings | 0.6.0 | [perception.ext.json](https://cityjson.github.io/extensions/perception/0.6.0/perception.ext.json) | [Binyu Lei](https://binyulei.github.io/) |
 | [quality](https://github.com/cityjson/extensions/tree/main/extensions/quality/1.0.1) | Application Domain Extension to data quality modeling | 1.0.1 | [quality.ext.json](https://cityjson.github.io/extensions/quality/1.0.1/quality.ext.json) | Grigory Ilizirov, Sagi Dalyot |
 | [shed](https://github.com/cityjson/extensions/tree/main/extensions/shed/0.1.1) | Example of an Extension for modelling sheds; meant as a template to learn how to construct an Extension | 0.1.1 | [shed.ext.json](https://cityjson.github.io/extensions/shed/0.1.1/shed.ext.json) | [Hugo Ledoux](https://github.com/hugoledoux) |
-| [val3dity](https://github.com/cityjson/extensions/tree/main/extensions/val3dity/0.2.0) | Extension to store val3dity validation reports and per-geometry diagnostics. | 0.2.0 | [val3dity.ext.json](https://cityjson.github.io/extensions/val3dity/0.2.0/val3dity.ext.json) | [Ravi Peters](https://github.com/ylannl) |
+| [val3dity](https://github.com/cityjson/extensions/tree/main/extensions/val3dity/0.2.0) | Extension to store val3dity validation reports and per-geometry diagnostics. | 0.2.0 | [val3dity.ext.json](https://cityjson.github.io/extensions/val3dity/0.2.0/val3dity.ext.json) | CityJSON contributors |
 <!-- EXTENSIONS_TABLE_END -->
 
 
