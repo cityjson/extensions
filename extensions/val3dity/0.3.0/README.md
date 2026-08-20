@@ -9,10 +9,10 @@ You can visually inspect the val3dity errors in CityJSON files that use this ext
 
 The root property `+val3dity-report` stores metadata about the validation run:
 
-- `val3dityVersion`: version of val3dity used.
+- `val3dity_version`: version of val3dity used.
 - `validity`: overall dataset validity.
 - `parameters`: validation tolerances and other run parameters.
-- `featuresOverview`, `primitivesOverview`, `errorCodeSummary`, and `datasetErrors`: dataset-level summaries.
+- `features_overview`, `primitives_overview`, `error_code_summary`, and `dataset_errors`: dataset-level summaries.
 
 ## CityObject validation
 
@@ -21,6 +21,8 @@ Invalid geometries should include grouped errors under `geometries`; valid CityO
 
 Each geometry validation record uses `geometryIndex` to refer to the existing CityObject `geometry` array. 
 Geometry type and LoD are not duplicated because they are already stored on the referenced geometry.
+
+The optional `features` array stores cross-feature errors (e.g. overlapping building parts) that cannot be attributed to a single geometry.
 
 Each error stores:
 
@@ -43,7 +45,7 @@ If a producer reports or derives a point location, `location.point` may be added
 
 ## Example
 
-See folder `examples/` for 3 examples CityJSON files with embedded val3dity reports.
+See folder `examples/` for 3 example files with embedded val3dity reports.
 
 
 ## val3dity integration
@@ -52,3 +54,15 @@ From v2.7.0 of val3dity, you can use the option `--report_in_cityjson` to direct
 It adds the extension, the root property, and the report for each City Object.
 
 It works for both CityJSON and CityJSONSeq files.
+
+## Changelog
+
+### 0.3.0
+
+- **Breaking**: Root report property names changed from camelCase to snake_case (`val3dityVersion` → `val3dity_version`, `featuresOverview` → `features_overview`, etc.)
+- Added `features` array to `cityobject-validation` for cross-feature errors (e.g. overlapping building parts)
+- Removed `python/merge_val3dity_report.py` — use val3dity's `--report_in_cityjson` option instead
+
+### 0.2.0
+
+- Initial release
