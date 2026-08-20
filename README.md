@@ -16,6 +16,7 @@ CityJSON Extensions allow you to add custom properties and objects to CityJSON d
 <!-- EXTENSIONS_TABLE_START -->
 | Extension | Description | Latest version | Schema | Developer(s) |
 |-----------|-------------|----------------|--------|--------------|
+| [dynamizer](https://github.com/cityjson/extensions/tree/main/extensions/dynamizer/2.0.0) | Extension for representing CityGML 3.0 Dynamizer concepts in CityJSON 2.0. | 2.0.0 | [dynamizer.ext.json](https://cityjson.github.io/extensions/dynamizer/2.0.0/dynamizer.ext.json) | [Imane Jeddoub](https://github.com/JEDDOUB) |
 | [energy-space-heating](https://github.com/cityjson/extensions/tree/main/extensions/energy-space-heating/1.1.1) | CityJSON Energy Extension for Space Heating Demand Calculation | 1.1.1 | [energy-space-heating.ext.json](https://cityjson.github.io/extensions/energy-space-heating/1.1.1/energy-space-heating.ext.json) | Özge Tufan |
 | [lcc](https://github.com/cityjson/extensions/tree/main/extensions/lcc/0.3.0) | Extension to model the topology of the city as a linear cell complex based on a combinatorial map. | 0.3.0 | [lcc.ext.json](https://cityjson.github.io/extensions/lcc/0.3.0/lcc.ext.json) | [Stelios Vitalis](https://github.com/liberostelios) |
 | [multiroofs](https://github.com/cityjson/extensions/tree/main/extensions/multiroofs/0.1.0) | Extension for the MultiRoofs EU project (https://multiroofs.nweurope.eu) | 0.1.0 | [multiroofs.ext.json](https://cityjson.github.io/extensions/multiroofs/0.1.0/multiroofs.ext.json) | Hugo Ledoux |
