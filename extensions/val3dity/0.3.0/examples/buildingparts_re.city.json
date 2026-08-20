@@ -1,0 +1,314 @@
+{
+  "+val3dity-report": {
+    "dataset_errors": [],
+    "error_code_summary": [],
+    "features_overview": [
+      {
+        "total": 1,
+        "type": "Building",
+        "valid": 0
+      }
+    ],
+    "parameters": {
+      "overlap_tol": -1.0,
+      "planarity_d2p_tol": 0.01,
+      "planarity_n_tol": 20.0,
+      "snap_tol": 0.001
+    },
+    "primitives_overview": [
+      {
+        "total": 2,
+        "type": "Solid",
+        "valid": 2
+      }
+    ],
+    "val3dity_version": "2.7.0b0",
+    "validity": false
+  },
+  "CityObjects": {
+    "elvisisstillalive": {
+      "attributes": {
+        "+val3dity-validation": {
+          "features": [
+            {
+              "code": 601,
+              "description": "BUILDINGPARTS_OVERLAP",
+              "info": "geometries are lod=1.2",
+              "location": {},
+              "sourceId": "coid=elvisisstillalive-1|geom=0&&coid=elvisisstillalive-2|geom=0"
+            }
+          ],
+          "geometries": [],
+          "validity": false
+        }
+      },
+      "children": [
+        "elvisisstillalive-1",
+        "elvisisstillalive-2"
+      ],
+      "type": "Building"
+    },
+    "elvisisstillalive-1": {
+      "attributes": {
+        "+val3dity-validation": {
+          "geometries": [
+            {
+              "errors": [],
+              "geometryIndex": 0
+            }
+          ],
+          "validity": true
+        }
+      },
+      "geometry": [
+        {
+          "boundaries": [
+            [
+              [
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ],
+              [
+                [
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              ],
+              [
+                [
+                  0,
+                  3,
+                  5,
+                  4
+                ]
+              ],
+              [
+                [
+                  3,
+                  2,
+                  6,
+                  5
+                ]
+              ],
+              [
+                [
+                  2,
+                  1,
+                  7,
+                  6
+                ]
+              ],
+              [
+                [
+                  1,
+                  0,
+                  4,
+                  7
+                ]
+              ]
+            ]
+          ],
+          "lod": "1.2",
+          "type": "Solid"
+        }
+      ],
+      "parents": [
+        "elvisisstillalive"
+      ],
+      "type": "BuildingPart"
+    },
+    "elvisisstillalive-2": {
+      "attributes": {
+        "+val3dity-validation": {
+          "geometries": [
+            {
+              "errors": [],
+              "geometryIndex": 0
+            }
+          ],
+          "validity": true
+        }
+      },
+      "geometry": [
+        {
+          "boundaries": [
+            [
+              [
+                [
+                  8,
+                  9,
+                  10,
+                  11
+                ]
+              ],
+              [
+                [
+                  12,
+                  13,
+                  14,
+                  15
+                ]
+              ],
+              [
+                [
+                  8,
+                  11,
+                  13,
+                  12
+                ]
+              ],
+              [
+                [
+                  11,
+                  10,
+                  14,
+                  13
+                ]
+              ],
+              [
+                [
+                  10,
+                  9,
+                  15,
+                  14
+                ]
+              ],
+              [
+                [
+                  9,
+                  8,
+                  12,
+                  15
+                ]
+              ]
+            ]
+          ],
+          "lod": "1.2",
+          "type": "Solid"
+        }
+      ],
+      "parents": [
+        "elvisisstillalive"
+      ],
+      "type": "BuildingPart"
+    }
+  },
+  "extensions": {
+    "val3dity": {
+      "url": "https://cityjson.github.io/extensions/val3dity/0.3.0/val3dity.ext.json",
+      "version": "0.3.0"
+    }
+  },
+  "metadata": {
+    "geographicalExtent": [
+      0.0,
+      0.0,
+      0.0,
+      250.0,
+      100.0,
+      100.0
+    ]
+  },
+  "transform": {
+    "scale": [
+      0.001,
+      0.001,
+      0.001
+    ],
+    "translate": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "type": "CityJSON",
+  "version": "2.0",
+  "vertices": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      100000,
+      0
+    ],
+    [
+      100000,
+      100000,
+      0
+    ],
+    [
+      100000,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      100000
+    ],
+    [
+      100000,
+      0,
+      100000
+    ],
+    [
+      100000,
+      100000,
+      100000
+    ],
+    [
+      0,
+      100000,
+      100000
+    ],
+    [
+      50000,
+      0,
+      0
+    ],
+    [
+      50000,
+      100000,
+      0
+    ],
+    [
+      250000,
+      100000,
+      0
+    ],
+    [
+      250000,
+      0,
+      0
+    ],
+    [
+      50000,
+      0,
+      100000
+    ],
+    [
+      250000,
+      0,
+      100000
+    ],
+    [
+      250000,
+      100000,
+      100000
+    ],
+    [
+      50000,
+      100000,
+      100000
+    ]
+  ]
+}
