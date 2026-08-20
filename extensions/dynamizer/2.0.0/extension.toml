@@ -1,0 +1,9 @@
+[extension]
+name = "dynamizer"
+version = "2.0.0"
+versionCityJSON = "2.0"
+description = "Extension for representing CityGML 3.0 Dynamizer concepts in CityJSON 2.0."
+authors = ["[Imane Jeddoub](https://github.com/JEDDOUB)"]
+repository = "https://github.com/JEDDOUB/cityjson-dynamizer-extension"
+keywords = ["dynamizer", "time-series", "sensor", "citygml", "cityjson"]
+license = "MIT"
